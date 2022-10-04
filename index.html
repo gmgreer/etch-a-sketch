@@ -5,15 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer ></script>
+    
     <title>Document</title>
 </head>
 <body>
-    <header></header>
-    <main>
-        <div class="controls"></div>
-        <div class="grid"></div>
+    <header>
+        <h1 class="title">Etch-A-Sketch</h1>
+    </header>
+    <main class="main">
+        <div class="controls">
+            <input  type="color" id="color-button"></input>
+            <button class ="button" id="eraser-button">Eraser</button>
+            <button class="button" id="clear-button">Clear</button>
+            <input type="range" min="1" max="64" value="16" id="grid-size">
+        </div>
+        <div class="grid" id="grid">
+
+        </div>
     </main>
-    
+
+    <script src="script.js"  ></script>
 </body>
 </html>
