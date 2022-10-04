@@ -14,7 +14,7 @@ document.body.onmouseup = () => (mouseDown = false)
 
 
 color.oninput = e => setColor(e.target.value)
-eraser.onclick = () => setColor("grey")
+eraser.onclick = () => setColor("whitesmoke")
 clear.onclick = () => clearGrid()
 gridSize.onmousemove = e => setSize(e.target.value)
 gridSize.onchange = e => setGridSize(e.target.value)
@@ -35,8 +35,12 @@ const setColor = (color) => {
 }
 
 const changeColor = (e) => {
-    if (e.type === 'mouseover' & !mouseDown ) return;
-    e.target.style.backgroundColor = defaultColor
+    if (e.type === 'mouseover' && !mouseDown ) {
+        return;
+    } else {
+        e.target.style.backgroundColor = defaultColor
+    }
+    
 }
 
 const setGridSize = (size) => {
@@ -44,11 +48,11 @@ const setGridSize = (size) => {
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`
     
     for (let i= 0; i < size *size; i++) {
-        let gridElement = document.createElement("div");
-    gridElement.classList.add("square");
-    gridElement.addEventListener("mouseover", changeColor)
-    gridElement.addEventListener("mousedown", changeColor)
-    grid.appendChild(gridElement)
+    let gridSquare = document.createElement("div");
+    gridSquare.classList.add("square");
+    gridSquare.addEventListener("mouseover", changeColor)
+    gridSquare.addEventListener("mousedown", changeColor)
+    grid.appendChild(gridSquare)
     }
     
 }
