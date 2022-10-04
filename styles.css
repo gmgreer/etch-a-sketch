@@ -52,7 +52,7 @@ input[type='range'] {
 .grid {
     height: 600px;
     width: 600px;
-    background-color: gray;
+    background-color: whitesmoke;
     margin-left: 16px;
     border: 3px solid black;
 }
