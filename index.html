@@ -17,7 +17,10 @@
             <input  type="color" id="color-button"></input>
             <button class ="button" id="eraser-button">Eraser</button>
             <button class="button" id="clear-button">Clear</button>
-            <input type="range" min="1" max="64" value="16" id="grid-size">
+            <div class="range">
+            <label for="grid-size" id="grid-size-label">64 x 64</label>
+            <input type="range" min="1" max="64" value="64"  name="grid-size" id="grid-size">
+            </div>
         </div>
         <div class="grid" id="grid">
 
